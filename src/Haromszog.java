@@ -12,21 +12,19 @@ public class Haromszog extends Sokszog {
     }
 
     public Haromszog() {
-        super(getVeletlenOldal());
-        this.b = getVeletlenOldal();
-        this.c = getVeletlenOldal();
+        super(getVeletlenOldal(10,5));
+        this.b = getVeletlenOldal(10, 5);
+        this.c = getVeletlenOldal(10, 5);
 
         while (!isSzerkesztheto()) {
-            super.setA(getVeletlenOldal());
-            this.b = getVeletlenOldal();
-            this.c = getVeletlenOldal();
+            super.setA(getVeletlenOldal(10, 5));
+            this.b = getVeletlenOldal(10, 5);
+            this.c = getVeletlenOldal(10, 5);
         }
 
     }
 
-    private static double getVeletlenOldal() {
-        return Math.random() * 5 + 5;
-    }
+
 
     private boolean isSzerkesztheto() {
         boolean szerkesztheto = true;

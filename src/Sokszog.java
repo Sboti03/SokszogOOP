@@ -8,7 +8,10 @@ public abstract class Sokszog {
     public double getA() {
         return a;
     }
-
+    public static int getVeletlenOldal(int max, int min) {
+        int range = max - min + 1;
+        return (int)(Math.random() * range) + min;
+    }
     public void setA(double a) {
         this.a = a;
     }
